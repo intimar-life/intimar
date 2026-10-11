@@ -16,7 +16,7 @@ export const WHATSAPP_URL = 'https://wa.me/message/ADKIDDUXI3F5H1';
 // Umami Cloud (cookieless analytics: visits, sources, UTM campaigns and the
 // "Quiero Inscribirme" event, without a consent banner). Public ID from
 // cloud.umami.is → the site's settings; analytics stay off while it's empty.
-export const UMAMI_WEBSITE_ID = 'be06cccc-ccc4-4dde-a6d9-c09ca9342cc2';
+export const UMAMI_WEBSITE_ID: string = 'be06cccc-ccc4-4dde-a6d9-c09ca9342cc2';
 
 // Prefixes a root-relative internal path with the site's configured base
 // path (astro.config.mjs's `base`, exposed as import.meta.env.BASE_URL).
