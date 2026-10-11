@@ -78,3 +78,15 @@ test('card surfaces switch away from a literal white background in dark mode', a
   const card = page.locator('a[href^="/events/"]').first();
   await expect(card).not.toHaveCSS('background-color', 'rgb(255, 255, 255)');
 });
+
+test('facilitator cards use the light palette, and the maroon one in dark mode', async ({
+  page,
+}) => {
+  await page.goto('/');
+  const card = page.locator('.team-card').first();
+
+  // --tc-bg in TeamCard.astro: paper in light mode, the hero maroon in dark.
+  await expect(card).toHaveCSS('background-color', 'rgb(251, 245, 238)');
+  await page.click('#theme-toggle');
+  await expect(card).toHaveCSS('background-color', 'rgb(60, 10, 13)');
+});
