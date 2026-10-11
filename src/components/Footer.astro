@@ -68,6 +68,12 @@ const year = new Date().getFullYear();
   </div>
 
   <p class="border-t border-ink-200/60 px-6 py-4 text-center text-xs text-ink-600">
-    © {year} Intimar. Todos los derechos reservados.
+    © {year} Intimar. Todos los derechos reservados. ·{' '}
+    <a
+      href={withBase('/privacy')}
+      class="underline-offset-2 hover:text-ink-900 hover:underline"
+    >
+      Política de privacidad
+    </a>
   </p>
 </footer>

@@ -9,6 +9,7 @@ const pages = [
   '/team',
   '/about',
   '/faq',
+  '/privacy',
   '/contact',
   // Blog pages only exist (meaningfully) while a post is published.
   ...(hasPublishedBlogPosts()

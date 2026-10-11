@@ -1,0 +1,97 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { CONTACT_EMAIL } from '../lib/site';
+
+// Written to describe what the site actually does today — cookieless,
+// anonymous visit statistics, sign-ups that leave the site for a messaging
+// service, fonts served from our own domain — without naming vendors.
+// Update the text (and the date) whenever any of that changes.
+const updated = '11 de octubre de 2026';
+---
+
+<Layout
+  title="Política de privacidad"
+  description="Qué datos recoge el sitio de Intimar, para qué los usamos y cómo ejercer tus derechos."
+>
+  <section class="mx-auto max-w-3xl px-6 py-16">
+    <p class="text-sm font-medium tracking-widest text-terracotta-text uppercase">
+      Privacidad
+    </p>
+    <h1 class="mt-2 font-serif text-3xl text-ink-900 sm:text-4xl">
+      Política de privacidad
+    </h1>
+    <p class="mt-2 text-sm text-ink-600">Última actualización: {updated}</p>
+
+    <div class="prose mt-8 max-w-none prose-p:text-ink-700 prose-li:text-ink-700 prose-headings:font-serif prose-headings:text-ink-900 prose-a:text-ink-900">
+      <p>
+        En Intimar trabajamos con temas íntimos, y por eso cuidamos tu
+        privacidad también en este sitio: recogemos lo mínimo necesario y nada
+        que permita identificarte mientras navegas.
+      </p>
+
+      <h2>Qué medimos cuando visitas el sitio</h2>
+      <p>
+        Usamos una herramienta de estadísticas respetuosa de la privacidad para
+        saber, de forma anónima y agregada, cómo se usa el sitio:
+      </p>
+      <ul>
+        <li>qué páginas se visitan;</li>
+        <li>
+          desde dónde llegan las visitas (por ejemplo, un buscador, una red
+          social o una campaña);
+        </li>
+        <li>el país, y el tipo de dispositivo y navegador;</li>
+        <li>cuántas veces se presiona el botón «Quiero Inscribirme».</li>
+      </ul>
+      <p>
+        Esta herramienta <strong>no usa cookies</strong>,{' '}
+        <strong>no guarda tu dirección IP</strong> ni otros datos que te
+        identifiquen, y no te sigue a otros sitios. No podemos saber quién eres
+        ni reconocerte de un día para otro. Si tu navegador tiene activada la
+        opción «No rastrear» (<em>Do Not Track</em>), no registramos tu visita.
+      </p>
+      <p>
+        Usamos estas estadísticas solo para mejorar el sitio y entender qué
+        encuentros interesan. No las vendemos, no las usamos para publicidad y
+        no armamos perfiles de nadie.
+      </p>
+
+      <h2>Cuando te inscribes</h2>
+      <p>
+        El botón «Quiero Inscribirme» abre una conversación con nosotros en un
+        servicio de mensajería externo. Desde ese momento sales de este sitio, y
+        ese servicio tiene su propia política de privacidad. Lo que nos cuentes
+        ahí, o por correo a{' '}
+        <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>, lo usamos solo
+        para responderte y coordinar tu participación. No lo compartimos con
+        terceros.
+      </p>
+
+      <h2>Alojamiento del sitio</h2>
+      <p>
+        El sitio está publicado en un proveedor de alojamiento externo que, como
+        cualquier servidor, puede registrar datos técnicos de las conexiones
+        (como la dirección IP) para funcionar y protegerse de abusos. Nosotros
+        no usamos esos registros. Las tipografías e imágenes se sirven desde
+        nuestro propio dominio; el único recurso externo que carga el sitio es
+        la herramienta de estadísticas descrita más arriba.
+      </p>
+
+      <h2>Tus derechos</h2>
+      <p>
+        De acuerdo con la ley chilena de protección de datos personales, puedes
+        pedirnos acceder a los datos que tengamos sobre ti, corregirlos,
+        eliminarlos u oponerte a que los usemos. Escríbenos a{' '}
+        <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a> y te
+        responderemos.
+      </p>
+
+      <h2>Cambios en esta política</h2>
+      <p>
+        Si cambiamos lo que medimos o cómo lo hacemos, actualizaremos esta
+        página y su fecha. Siempre la encontrarás en el pie de cualquier página
+        del sitio.
+      </p>
+    </div>
+  </section>
+</Layout>
