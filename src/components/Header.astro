@@ -64,6 +64,8 @@ const navLinks = [
         type="button"
         aria-label="Cambiar tema"
         aria-pressed="false"
+        data-umami-event="cambio_tema"
+        data-umami-event-tema="oscuro"
         class="rounded-md p-2 text-ink-700 transition hover:text-ink-900"
       >
         <span
@@ -106,6 +108,8 @@ const navLinks = [
           id="theme-toggle-mobile"
           type="button"
           aria-pressed="false"
+          data-umami-event="cambio_tema"
+          data-umami-event-tema="oscuro"
           class="flex items-center gap-2 rounded px-3 py-2 text-left text-sm text-ink-700 hover:bg-ink-100"
         >
           <span
@@ -146,6 +150,11 @@ const navLinks = [
           if (moon) moon.classList.toggle('hidden', isDark);
           if (label) label.textContent = isDark ? 'Modo claro' : 'Modo oscuro';
           toggle.setAttribute('aria-pressed', String(isDark));
+          // Umami reads this at click time: the theme being switched to.
+          toggle.setAttribute(
+            'data-umami-event-tema',
+            isDark ? 'claro' : 'oscuro',
+          );
         });
       }
 
@@ -180,6 +189,26 @@ const navLinks = [
       });
       sync();
     })();
+
+    // Theme in use, reported once per browser session. On load, Umami's
+    // deferred script has run; without it (analytics off or blocked) skip.
+    window.addEventListener('load', function () {
+      if (!window.umami) return;
+      let chosen;
+      try {
+        if (sessionStorage.getItem('intimar-theme-tracked')) return;
+        sessionStorage.setItem('intimar-theme-tracked', '1');
+        chosen = localStorage.getItem('theme') !== null;
+      } catch {
+        return;
+      }
+      window.umami.track('tema', {
+        tema: document.documentElement.classList.contains('app-dark')
+          ? 'oscuro'
+          : 'claro',
+        origen: chosen ? 'elegido' : 'sistema',
+      });
+    });
 
     // Mobile menu (the <details>/<summary> disclosure above): closing only
     // on a second tap of the hamburger left it stuck open if a visitor

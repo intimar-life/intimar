@@ -90,3 +90,15 @@ test('facilitator cards use the light palette, and the maroon one in dark mode',
   await page.click('#theme-toggle');
   await expect(card).toHaveCSS('background-color', 'rgb(60, 10, 13)');
 });
+
+test('theme toggle exposes the Umami event with the destination theme', async ({
+  page,
+}) => {
+  await page.goto('/');
+  const toggle = page.locator('#theme-toggle');
+  await expect(toggle).toHaveAttribute('data-umami-event', 'cambio_tema');
+  await expect(toggle).toHaveAttribute('data-umami-event-tema', 'oscuro');
+
+  await toggle.click();
+  await expect(toggle).toHaveAttribute('data-umami-event-tema', 'claro');
+});
