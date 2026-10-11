@@ -255,6 +255,15 @@
 }
 
 @layer components {
+  /* Theme switch crossfade (see toggleTheme in Header.astro): a slightly
+     slower, eased version of the browser's default view transition. Scoped
+     to the theme switch so any future page transitions keep their own. */
+  html[data-theme-transition]::view-transition-old(root),
+  html[data-theme-transition]::view-transition-new(root) {
+    animation-duration: 350ms;
+    animation-timing-function: ease-in-out;
+  }
+
   .hero-candlelit {
     position: relative;
     overflow: hidden;

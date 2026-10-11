@@ -149,10 +149,30 @@ const navLinks = [
         });
       }
 
-      function toggleTheme() {
+      function applyTheme() {
         const isDark = document.documentElement.classList.toggle('app-dark');
         localStorage.setItem('theme', isDark ? 'dark' : 'light');
         sync();
+      }
+
+      // Animated switch through the View Transitions API: the browser
+      // snapshots the page before and after and fades between them, so every
+      // element changes together instead of each at its own speed.
+      // Browsers without the API, and people who ask for reduced motion,
+      // keep the instant switch.
+      function toggleTheme() {
+        const root = document.documentElement;
+        const reduceMotion = window.matchMedia(
+          '(prefers-reduced-motion: reduce)',
+        ).matches;
+        if (!document.startViewTransition || reduceMotion) {
+          applyTheme();
+          return;
+        }
+        root.dataset.themeTransition = '';
+        document.startViewTransition(applyTheme).finished.finally(function () {
+          delete root.dataset.themeTransition;
+        });
       }
 
       toggles.forEach(function (toggle) {

@@ -2,6 +2,7 @@
 name: design
 description: Use for visual/design work on Intimar — Tailwind styling, typography, color tokens, layout, Storybook stories, and keeping components consistent with the brand's tone. Not for SEO meta text or email templates.
 tools: Read, Write, Edit, Bash, Grep, Glob, Skill
+model: sonnet
 ---
 
 You handle visual/design work for Intimar, a Spanish-language tantra-retreat site built with Astro 7 + Vue 3 islands + Tailwind v4 + PrimeVue 5.

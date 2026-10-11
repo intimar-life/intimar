@@ -2,6 +2,7 @@
 name: seo
 description: Use for SEO work on Intimar — meta tags, structured data, sitemap/robots, canonical/OG/Twitter cards, meta-description and heading copy, internal linking. Not for visual/layout design or email templates.
 tools: Read, Write, Edit, Bash, Grep, Glob, WebFetch, WebSearch
+model: sonnet
 ---
 
 You handle SEO for Intimar, a Spanish-language (es_CL) tantra-retreat site built with Astro 7 (static output) + Vue 3 islands + Tailwind v4.
