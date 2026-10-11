@@ -32,10 +32,18 @@ test('event detail page renders content, hosts, and a valid Event schema', async
 }) => {
   await page.goto('/events/un-portal-al-erotismo-consciente');
 
-  // Sign-up goes to the WhatsApp Business short link (no phone number).
-  await expect(
-    page.getByRole('link', { name: 'Quiero Inscribirme' }),
-  ).toHaveAttribute('href', /^https:\/\/wa\.me\/message\//);
+  // Sign-up goes to the WhatsApp Business short link (no phone number),
+  // and Umami counts each click as an inscription for this event.
+  const signUp = page.getByRole('link', { name: 'Quiero Inscribirme' });
+  await expect(signUp).toHaveAttribute('href', /^https:\/\/wa\.me\/message\//);
+  await expect(signUp).toHaveAttribute(
+    'data-umami-event',
+    'inscripcion_whatsapp',
+  );
+  await expect(signUp).toHaveAttribute(
+    'data-umami-event-evento',
+    'un-portal-al-erotismo-consciente',
+  );
   await expect(page.locator('h1')).toHaveText(
     'Un Portal al Erotismo Consciente',
   );

@@ -3,7 +3,7 @@ import { Font, getImage } from 'astro:assets';
 import '../styles/global.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import { withBase } from '../lib/site';
+import { UMAMI_WEBSITE_ID, withBase } from '../lib/site';
 import { getAllBlogPosts } from '../lib/data';
 // Default share card for pages without their own image (events and blog
 // posts pass theirs): the brand mark centred on --color-hero-bg at the
@@ -60,6 +60,11 @@ const {
   articlePublishedTime,
   articleAuthor,
 } = Astro.props;
+
+// Analytics only on the real, public site: production builds, and not on
+// pages hidden from search (noindex: /admin, the 404, disabled pages). The
+// script's data-domains also keeps localhost/staging visits from counting.
+const analytics = UMAMI_WEBSITE_ID !== '' && import.meta.env.PROD && !noindex;
 
 // Don't advertise an empty feed to feed readers while no post is published.
 const hasBlogPosts = (await getAllBlogPosts()).length > 0;
@@ -168,6 +173,16 @@ const absoluteImageURL = new URL(image, Astro.site);
         set:html={JSON.stringify(data)}
       ></script>
     ))}
+    {analytics && (
+      <script
+        is:inline
+        defer
+        src="https://cloud.umami.is/script.js"
+        data-website-id={UMAMI_WEBSITE_ID}
+        data-domains="intimar.life"
+        data-do-not-track="true"
+      />
+    )}
   </head>
   <body class="flex min-h-screen flex-col">
     <a
