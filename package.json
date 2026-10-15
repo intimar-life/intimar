@@ -46,7 +46,7 @@
   "devDependencies": {
     "@astrojs/check": "^0.9.10",
     "@axe-core/playwright": "^4.13.0",
-    "@chromatic-com/storybook": "^5.4.0",
+    "@chromatic-com/storybook": "^5.5.0",
     "@cspell/dict-es-es": "^3.0.9",
     "@eslint/js": "^10.0.1",
     "@lhci/cli": "^0.15.1",
