@@ -46,7 +46,7 @@
   "devDependencies": {
     "@astrojs/check": "^0.9.10",
     "@axe-core/playwright": "^4.13.0",
-    "@chromatic-com/storybook": "^5.4.0",
+    "@chromatic-com/storybook": "^5.5.0",
     "@cspell/dict-es-es": "^3.0.9",
     "@eslint/js": "^10.0.1",
     "@lhci/cli": "^0.15.1",
@@ -57,7 +57,7 @@
     "@storybook/addon-vitest": "^10.6.1",
     "@storybook/vue3-vite": "^10.6.1",
     "@vitejs/plugin-vue": "^6.0.10",
-    "@vitest/browser-playwright": "^5.0.3",
+    "@vitest/browser-playwright": "^5.0.4",
     "@vitest/coverage-v8": "^5.0.3",
     "cspell": "^10.3.6",
     "eslint": "^10.12.0",
