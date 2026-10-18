@@ -1,7 +1,7 @@
 import type { App } from 'vue';
 import PrimeVue from 'primevue/config';
-import { definePreset } from '@primevue/themes';
-import Aura from '@primevue/themes/aura';
+import { definePreset } from '@primeuix/themes';
+import Aura from '@primeuix/themes/aura';
 
 // Aura's default "primary" is emerald green, which clashes with the site's
 // warm terracotta palette (visible on Carousel dots and focus rings).
