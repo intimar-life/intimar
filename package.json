@@ -28,12 +28,12 @@
   "dependencies": {
     "@astrojs/rss": "^4.0.19",
     "@astrojs/sitemap": "^3.7.4",
-    "@astrojs/vue": "^7.0.3",
+    "@astrojs/vue": "^7.1.0",
     "@playform/compress": "^0.2.5",
     "@primeuix/themes": "^3.0.1",
     "@tailwindcss/typography": "^0.5.20",
     "@tailwindcss/vite": "^4.3.3",
-    "astro": "^7.3.8",
+    "astro": "^7.4.0",
     "primeicons": "^8.0.2",
     "primevue": "^5.0.2",
     "tailwindcss": "^4.3.3",
@@ -45,7 +45,7 @@
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.10",
-    "@axe-core/playwright": "^4.13.0",
+    "@axe-core/playwright": "^4.14.0",
     "@chromatic-com/storybook": "^5.5.1",
     "@cspell/dict-es-es": "^3.0.9",
     "@eslint/js": "^10.0.1",
