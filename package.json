@@ -64,7 +64,7 @@
     "eslint-plugin-astro": "^3.2.1",
     "eslint-plugin-vue": "^10.11.1",
     "globals": "^17.13.0",
-    "knip": "^6.41.0",
+    "knip": "^6.42.0",
     "playwright": "^1.63.0",
     "prettier": "^3.9.10",
     "prettier-plugin-astro": "^1.1.1",
