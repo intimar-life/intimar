@@ -8,6 +8,7 @@
   "endDate": "2026-11-28",
   "price": 30000,
   "currency": "CLP",
+  "image": "../images/events/tantra-desde-cero.jpg",
   "tags": ["tantra", "primera vez", "solo o acompañado"],
   "hostIds": ["fernanda-pinochet", "klaus-hott"],
   "featured": true,
