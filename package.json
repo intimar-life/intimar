@@ -33,7 +33,7 @@
     "@primeuix/themes": "^3.1.0",
     "@tailwindcss/typography": "^0.5.20",
     "@tailwindcss/vite": "^4.3.5",
-    "astro": "^7.4.7",
+    "astro": "^7.4.8",
     "primeicons": "^8.0.2",
     "primevue": "^5.0.4",
     "tailwindcss": "^4.3.3",
@@ -72,7 +72,7 @@
     "sharp": "^0.35.5",
     "storybook": "^10.6.0",
     "typescript": "^6.0.3",
-    "typescript-eslint": "^8.72.1",
+    "typescript-eslint": "^8.72.2",
     "vitest": "^5.1.0",
     "vue-eslint-parser": "^10.4.2"
   }
