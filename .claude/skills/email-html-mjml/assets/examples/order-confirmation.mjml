@@ -89,8 +89,7 @@
         <mj-text>
           Order <strong>#{{ order.number }}</strong> was placed on
           {{ order.placedAt }} and is estimated to arrive by
-          <strong>{{ order.eta }}</strong
-          >.
+          <strong>{{ order.eta }}</strong>.
         </mj-text>
         <mj-divider />
       </mj-column>

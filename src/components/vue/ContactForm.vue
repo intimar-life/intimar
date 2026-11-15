@@ -168,8 +168,7 @@ function handleSubmit() {
       enviar. Si no se abrió, escríbenos directamente a
       <a :href="`mailto:${toEmail}`" class="underline underline-offset-2">{{
         toEmail
-      }}</a
-      >.
+      }}</a>.
     </Message>
   </form>
 </template>
