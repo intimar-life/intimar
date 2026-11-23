@@ -38,7 +38,7 @@
     "primevue": "^5.0.5",
     "tailwindcss": "^4.3.3",
     "tailwindcss-primeui": "^0.6.1",
-    "vue": "^3.5.45"
+    "vue": "^3.5.46"
   },
   "allowScripts": {
     "esbuild": true
@@ -51,10 +51,10 @@
     "@eslint/js": "^10.0.1",
     "@lhci/cli": "^0.16.1",
     "@playwright/test": "^1.65.1",
-    "@storybook/addon-a11y": "^10.6.7",
-    "@storybook/addon-docs": "^10.6.7",
-    "@storybook/addon-vitest": "^10.6.7",
-    "@storybook/vue3-vite": "^10.6.7",
+    "@storybook/addon-a11y": "^10.6.8",
+    "@storybook/addon-docs": "^10.6.8",
+    "@storybook/addon-vitest": "^10.6.8",
+    "@storybook/vue3-vite": "^10.6.8",
     "@vitejs/plugin-vue": "^6.0.11",
     "@vitest/browser-playwright": "^5.1.1",
     "@vitest/coverage-v8": "^5.0.5",
@@ -64,7 +64,7 @@
     "eslint-plugin-astro": "^3.2.1",
     "eslint-plugin-vue": "^10.12.1",
     "globals": "^17.14.0",
-    "knip": "^6.46.1",
+    "knip": "^6.47.0",
     "playwright": "^1.63.0",
     "prettier": "^3.10.1",
     "prettier-plugin-astro": "^1.1.2",
