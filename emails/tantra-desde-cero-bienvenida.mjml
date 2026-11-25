@@ -1,0 +1,107 @@
+<!-- Compile con: npx --yes mjml emails/tantra-desde-cero-bienvenida.mjml -o emails/tantra-desde-cero-bienvenida.html --config.minify=true --config.validationLevel=strict -->
+<mjml lang="es">
+  <mj-head>
+    <mj-title>Tantra desde Cero: te esperamos el sábado 28 de noviembre</mj-title>
+    <mj-preview>Lo práctico para el sábado: horario, lugar y qué traer. No necesitas experiencia previa.</mj-preview>
+    <mj-font name="Fraunces" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..700,100,1&amp;display=swap" />
+    <mj-font name="Belleza" href="https://fonts.googleapis.com/css2?family=Belleza&amp;display=swap" />
+    <mj-attributes>
+      <mj-all font-family="Belleza, Arial, sans-serif" />
+      <mj-text font-size="16px" line-height="1.6" color="#332922" padding="0 0 14px 0" />
+      <mj-class name="serif" font-family="Fraunces, Georgia, 'Times New Roman', serif" font-weight="400" />
+    </mj-attributes>
+    <mj-raw>
+      <meta name="color-scheme" content="light dark">
+      <meta name="supported-color-schemes" content="light dark">
+    </mj-raw>
+    <mj-html-attributes>
+      <mj-selector path=".h1 div">
+        <mj-html-attribute name="role">heading</mj-html-attribute>
+        <mj-html-attribute name="aria-level">1</mj-html-attribute>
+      </mj-selector>
+      <mj-selector path=".h2 div">
+        <mj-html-attribute name="role">heading</mj-html-attribute>
+        <mj-html-attribute name="aria-level">2</mj-html-attribute>
+      </mj-selector>
+    </mj-html-attributes>
+    <mj-style>
+      @media (prefers-color-scheme: dark) {
+        body, .bg-page, .bg-page div, .bg-page table, .bg-page td { background-color: #1f0c0a !important; }
+        .t-body, .t-body div, .t-body p { color: #d8c7ab !important; }
+        .t-head, .t-head div { color: #f2e9e0 !important; }
+        .t-muted, .t-muted div { color: #c2ac8c !important; }
+        .t-link, .t-link a { color: #e2925f !important; }
+        .rule td { border-top-color: #401915 !important; border-bottom-color: #401915 !important; }
+        .logo-light { display: none !important; }
+        .logo-dark { display: block !important; max-height: none !important; }
+      }
+    </mj-style>
+  </mj-head>
+  <mj-body background-color="#f2e9e0" width="600px" css-class="bg-page">
+    <mj-section padding="40px 24px 8px 24px">
+      <mj-column>
+        <!-- Logos servidos desde public/email/ (URL estable). Decorativos: el nombre va en texto debajo. Clientes sin media queries (Gmail) muestran la versión clara. -->
+        <mj-text align="center" line-height="0" padding="0 0 14px 0"><img class="logo-light" src="https://intimar.life/email/logo-light.png" width="56" height="131" alt="" style="display:block;margin:0 auto;border:0;outline:none;" /><!--[if !mso]><!--><img class="logo-dark" src="https://intimar.life/email/logo-dark.png" width="56" height="131" alt="" style="display:none;max-height:0;overflow:hidden;margin:0 auto;border:0;outline:none;" /><!--<![endif]--></mj-text>
+        <mj-text css-class="t-head" mj-class="serif" align="center" font-size="26px" letter-spacing="3px" color="#1a1310" padding="0">Intimar</mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-section padding="24px 24px 0 24px">
+      <mj-column>
+        <mj-text css-class="t-head h1" mj-class="serif" font-size="32px" line-height="1.2" color="#1a1310" padding="0 0 16px 0">Te damos la bienvenida a Tantra desde Cero</mj-text>
+        <mj-text css-class="t-body">Hola {{{FIRST_NAME|}}},</mj-text>
+        <mj-text css-class="t-body">Gracias por inscribirte. Este es un espacio para acercarte al Tantra por primera vez, a tu ritmo y sin ninguna experiencia previa. Puedes venir sin compañía o con alguien, y nadie te va a pedir que seas otra cosa que tú.</mj-text>
+        <mj-text css-class="t-body">Tu viaje no empieza este sábado. Probablemente empezó cuando viste una publicación o un anuncio, o cuando alguien te habló de esto, con todo lo que sentiste en ese momento: aprensión y entusiasmo, miedo y curiosidad, contracción y expansión. Todo eso ya es parte del proceso.</mj-text>
+        <mj-text css-class="t-body">Te dejamos lo práctico para el sábado.</mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-section padding="8px 24px 0 24px">
+      <mj-column css-class="rule" border-top="1px solid #d8c7ab" border-bottom="1px solid #d8c7ab" padding="20px 0 8px 0">
+        <mj-text css-class="t-muted" font-size="13px" letter-spacing="2px" color="#4a3d33" padding="0 0 12px 0">DÓNDE Y CUÁNDO</mj-text>
+        <mj-text css-class="t-head" mj-class="serif" font-size="20px" line-height="1.4" color="#1a1310" padding="0 0 4px 0">Sábado 28 de noviembre de 2026</mj-text>
+        <mj-text css-class="t-body" padding="0 0 14px 0">De 17:00 a 20:00 hrs</mj-text>
+        <mj-text css-class="t-head" mj-class="serif" font-size="20px" line-height="1.4" color="#1a1310" padding="0 0 4px 0">Hernando de Magallanes 1425</mj-text>
+        <mj-text css-class="t-body" padding="0 0 4px 0">7570975 Las Condes, Región Metropolitana</mj-text>
+        <mj-text css-class="t-link" padding="0 0 14px 0"><a href="https://maps.app.goo.gl/K9YxN18BsnE7ycWKA" style="color:#a8451f;">Ver en Google Maps</a></mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-section padding="24px 24px 0 24px">
+      <mj-column>
+        <mj-text css-class="t-head h2" mj-class="serif" font-size="22px" line-height="1.3" color="#1a1310" padding="0 0 10px 0">Llega a la hora</mj-text>
+        <mj-text css-class="t-body">El círculo empieza con el grupo completo, y cuando alguien llega tarde se rompe el espacio que estamos armando en conjunto. Te pedimos estar allí a las <strong>16:45</strong>, con unos minutos para aterrizar, saludar y acomodarte.</mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-section padding="8px 24px 0 24px">
+      <mj-column>
+        <mj-text css-class="t-head h2" mj-class="serif" font-size="22px" line-height="1.3" color="#1a1310" padding="0 0 10px 0">Qué traer</mj-text>
+        <mj-text css-class="t-body" padding="0 0 6px 0">&#8212; Una botella de agua.</mj-text>
+        <mj-text css-class="t-body" padding="0 0 6px 0">&#8212; Un cuaderno, para anotar un aprendizaje o algo que quieras recordar.</mj-text>
+        <mj-text css-class="t-body">&#8212; Ropa suelta y cómoda, en la que puedas moverte.</mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-section padding="8px 24px 0 24px">
+      <mj-column>
+        <mj-text css-class="t-body">Si te queda cualquier duda, o algo que quieras contarnos antes de llegar, escríbenos con confianza.</mj-text>
+        <mj-button href="https://wa.me/message/ADKIDDUXI3F5H1" background-color="#c2542f" color="#ffffff" font-family="Belleza, Arial, sans-serif" font-size="16px" border-radius="999px" inner-padding="12px 28px" align="left" padding="6px 0 14px 0">Escríbenos por WhatsApp</mj-button>
+        <mj-text css-class="t-muted" font-size="14px" color="#4a3d33">O al correo <a href="mailto:contacto@intimar.life" class="t-link" style="color:#a8451f;">contacto@intimar.life</a></mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-section padding="16px 24px 8px 24px">
+      <mj-column>
+        <mj-text css-class="t-body">Nos vemos el sábado.</mj-text>
+        <mj-text css-class="t-head" mj-class="serif" font-size="20px" line-height="1.4" color="#1a1310" padding="0">Fernanda y Klaus</mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-section padding="32px 24px 40px 24px">
+      <mj-column>
+        <mj-text css-class="t-muted" align="center" font-size="12px" color="#4a3d33" padding="0">Recibes este correo porque te inscribiste a Tantra desde Cero.<br /><a href="{{{RESEND_UNSUBSCRIBE_URL}}}" class="t-link" style="color:#a8451f;">Darme de baja</a></mj-text>
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>
